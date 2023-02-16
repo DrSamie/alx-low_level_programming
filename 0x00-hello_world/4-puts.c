@@ -1,7 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 /**
-* main
-* Return: 0
+* main-prints characters using puts function
+* Return: 0-when the function returns 0, it means the code is a success
 */
 int main(void)
 {
