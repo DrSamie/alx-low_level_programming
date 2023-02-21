@@ -2,7 +2,7 @@
 
 
 	/**
-	 * print_sign - 'prints the sign of a number'
+	 * print_sign - prints the sign of a number
 	 *
 	 * Description: 'prints the sign of a number'
 	 *
