@@ -1,1 +1,1 @@
-function that fills memory with a constant byte
+Even more pointers, arrays and strings

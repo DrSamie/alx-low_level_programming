@@ -1,21 +1,27 @@
 #include "main.h"
 /**
- * string_toupper - change all lowercase to uppercase
- * @n: pointer
- *
- * Return: n
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
  */
-char *string_toupper(char *n)
+char *_strstr(char *haystack, char *needle)
 {
-	int i;
-
-	i = 0;
-	while (n[i] != '\0')
+	for (; *haystack != '\0'; haystack++)
 	{
-		if (n[i] >= 'a' && n[i] <= 'z')
-			n[i] = n[i] - 32;
-		i++;
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
 	}
-	return (n);
+
+	return (0);
 }
 

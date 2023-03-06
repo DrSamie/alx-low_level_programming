@@ -1,25 +1,28 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * leet - encode into 1337speak
- * @n: input value
- * Return: n value
+ * print_diagsums - Entry point
+ * @a: input
+ * @size: input
+ * Return: Always 0 (Success)
  */
-char *leet(char *n)
+void print_diagsums(int *a, int size)
 {
-	int i, j;
-	char s1[] = "aAeEoOtTlL";
-	char s2[] = "4433007711";
+	int sum1, sum2, y;
 
-	for (i = 0; n[i] != '\0'; i++)
+	sum1 = 0;
+	sum2 = 0;
+
+	for (y = 0; y < size; y++)
 	{
-		for (j = 0; j < 10; j++)
-		{
-			if (n[i] == s1[j])
-			{
-				n[i] = s2[j];
-			}
-		}
+		sum1 = sum1 + a[y * size + y];
 	}
-	return (n);
+
+	for (y = size - 1; y >= 0; y--)
+	{
+		sum2 += a[y * size + (size - y - 1)];
+	}
+
+	printf("%d, %d\n", sum1, sum2);
 }
 
