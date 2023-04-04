@@ -19,4 +19,3 @@ h = h->next;
 
 return (num);
 }
-
